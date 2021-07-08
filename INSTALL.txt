@@ -30,17 +30,17 @@ sudo ln -sf /usr/local/eigen eigen3
 cd
  
 # Install Mitsuba
-git clone https://github.com/cmu-ci-lab/MitsubaToFRenderer.git 
-cd MitsubaToFRenderer 
+git clone https://github.com/wlmeng11/MitsubaER.git 
+cd MitsubaER 
 scons --clean
 scons
 cd
 
 # Replace <INST_PATH> with your installation location
-echo -e 'mitsuba_plugin_dir="<INST_PATH>/MitsubaToFRenderer/dist/plugins"' | sudo tee -a /etc/environment > /dev/null
-sudo sed -e '/^PATH/s/"$/:<INST_PATH>\/MitsubaToFRenderer\/dist"/g' -i /etc/environment
+echo -e 'mitsuba_plugin_dir="/usr/local/MitsubaToFRenderer/dist/plugins"' | sudo tee -a /etc/environment > /dev/null
+sudo sed -e '/^PATH/s/"$/:\/usr\/local\/MitsubaToFRenderer\/dist"/g' -i /etc/environment
 source /etc/environment
-echo "<INST_PATH>/MitsubaToFRenderer/dist" | sudo tee /etc/ld.so.conf.d/mitsuba.conf > /dev/null
+echo "/usr/local/MitsubaToFRenderer/dist" | sudo tee /etc/ld.so.conf.d/mitsuba.conf > /dev/null
 sudo ldconfig
  
 # Reboot for changes to take effect
