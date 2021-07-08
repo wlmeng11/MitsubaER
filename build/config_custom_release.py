@@ -14,6 +14,14 @@ OEXRINCLUDE    = ['/usr/include/OpenEXR']
 OEXRLIB        = ['Half', 'IlmImf', 'z']
 PNGLIB         = ['png']
 JPEGLIB        = ['jpeg']
+FASTWINDINGINCLUDE  = ['/home/wlmeng/MitsubaER/src/fast-winding-number-soups/tbb/include',
+ '/home/wlmeng/MitsubaER/src/fast-winding-number-soups/libigl/include',
+ '/home/wlmeng/MitsubaER/src/fast-winding-number-soups/libigl/cmake/../external/eigen',
+ '/home/wlmeng/MitsubaER/src/fast-winding-number-soups']
+FASTWINDINGFLAGS    = ['-fPIC', '-rdynamic', '-DNDEBUG']
+FASTWINDINGLIBDIR   = ['/home/wlmeng/MitsubaER/src/fast-winding-number-soups/build/CMakeFiles/fastwinding.dir/WindingNumber/',
+ '/home/wlmeng/MitsubaER/src/fast-winding-number-soups/build/tbb']
+FASTWINDINGLIB      = ['pthread', 'dl', 'tbb']
 XERCESINCLUDE  = []
 XERCESLIB      = ['xerces-c']
 GLLIB          = ['GL', 'GLU', 'GLEWmx', 'Xxf86vm', 'X11']

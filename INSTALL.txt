@@ -7,7 +7,7 @@
 sudo apt-get update
 sudo apt-get upgrade
 # updated dependencies for Debian 10
-sudo apt-get install subversion git-core mercurial keychain openssh-client openssh-server g++ g++-multilib build-essential zip unzip p7zip-full python2.7 python-dev apt-file vim scons qt4-dev-tools libpng-dev libjpeg-dev libilmbase-dev libxerces-c-dev libglewmx-dev libxxf86vm-dev libbz2-dev htop zlib1g-dev aptitude dkms gedit-plugins gedit-latex-plugin ntp gnome-terminal gimp gimp-ufraw ufraw ufraw-batch dcraw valgrind linux-tools smartmontools libapache2-mod-perl2 gnome-disk-utility libapache2-mod-svn subversion-tools gnome-system-tools unrar xml-twig-tools linux-headers-$(uname -r) rsync inkscape irssi mutt s3cmd meshlab openexr libopenexr-dev openexr-viewers libgnome2-bin gparted uml-utilities gpick gnome-color-manager libfftw3-3 libfftw3-dev libboost-all-dev pkg-config
+sudo apt-get install subversion git-core mercurial keychain openssh-client openssh-server g++ g++-multilib build-essential zip unzip p7zip-full python2.7 python-dev apt-file vim scons qt4-dev-tools libpng-dev libjpeg-dev libilmbase-dev libxerces-c-dev libglewmx-dev libxxf86vm-dev libbz2-dev htop zlib1g-dev aptitude dkms gedit-plugins gedit-latex-plugin ntp gnome-terminal gimp gimp-ufraw ufraw ufraw-batch dcraw valgrind linux-tools smartmontools libapache2-mod-perl2 gnome-disk-utility libapache2-mod-svn subversion-tools gnome-system-tools unrar xml-twig-tools linux-headers-$(uname -r) rsync inkscape irssi mutt s3cmd meshlab openexr libopenexr-dev openexr-viewers libgnome2-bin gparted uml-utilities gpick gnome-color-manager libfftw3-3 libfftw3-dev libboost-all-dev pkg-config libgoogle-glog-dev libceres-dev
  
 # Preparation for installations
 mkdir ~/Downloads
@@ -37,10 +37,10 @@ scons
 cd
 
 # Replace <INST_PATH> with your installation location
-echo -e 'mitsuba_plugin_dir="/usr/local/MitsubaToFRenderer/dist/plugins"' | sudo tee -a /etc/environment > /dev/null
-sudo sed -e '/^PATH/s/"$/:\/usr\/local\/MitsubaToFRenderer\/dist"/g' -i /etc/environment
+echo -e 'mitsuba_plugin_dir="/home/wlmeng/MitsubaER/dist/plugins"' | sudo tee -a /etc/environment > /dev/null
+sudo sed -e '/^PATH/s/"$/:\/home\/wlmeng\/MitsubaER\/dist"/g' -i /etc/environment
 source /etc/environment
-echo "/usr/local/MitsubaToFRenderer/dist" | sudo tee /etc/ld.so.conf.d/mitsuba.conf > /dev/null
+echo "/home/wlmeng/MitsubaER/dist" | sudo tee /etc/ld.so.conf.d/mitsuba.conf > /dev/null
 sudo ldconfig
  
 # Reboot for changes to take effect

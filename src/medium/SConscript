@@ -22,6 +22,6 @@ if hetrifEnv.has_key('CERESFLAGS'):
 	hetrifEnv.Append(CPPFLAGS=env['CERESFLAGS'])
 
 hetrifEnv['STATIC_AND_SHARED_OBJECTS_ARE_THE_SAME'] = True
-plugins += hetrifEnv.SharedLibrary('heterogeneousrefractive', ['heterogeneousrefractive.cpp', '/home/apedired/Dropbox/AccoustoOptics+InvRendering/CodeEtc/thirdParty/fast-winding-number-soups/build/CMakeFiles/fastwinding.dir/WindingNumber/UT_SolidAngle.cpp.o', '/home/apedired/Dropbox/AccoustoOptics+InvRendering/CodeEtc/thirdParty/fast-winding-number-soups/build/CMakeFiles/fastwinding.dir/WindingNumber/UT_Array.cpp.o', '/home/apedired/Dropbox/AccoustoOptics+InvRendering/CodeEtc/thirdParty/fast-winding-number-soups/build/tbb/libtbb.so'])
+plugins += hetrifEnv.SharedLibrary('heterogeneousrefractive', ['heterogeneousrefractive.cpp', '/home/wlmeng/MitsubaER/src/fast-winding-number-soups/build/CMakeFiles/fastwinding.dir/WindingNumber/UT_SolidAngle.cpp.o', '/home/wlmeng/MitsubaER/src/fast-winding-number-soups/build/CMakeFiles/fastwinding.dir/WindingNumber/UT_Array.cpp.o', '/home/wlmeng/MitsubaER/src/fast-winding-number-soups/build/tbb/libtbb.so'])
 
 Export('plugins')
